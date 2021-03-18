@@ -19,17 +19,16 @@ public class FoodLogger {
         } catch(IOException ioe) {
             System.out.println("Error, in creating writer objects: " + ioe.getMessage());
             ioe.printStackTrace();
+            return false;
         }
+        //These need to change to date,name,type,typeVal
         String comma = ",";
         pw.print(fm.getName() + comma);
         pw.print("" + fm.getCalories() + comma);
-        pw.println("" + fm.getFat() + comma);
-        pw.println("" + fm.getCarb() + comma);
-        pw.println("" + fm.getProtein());
-
-
-
-
-        return false;
+        pw.print("" + fm.getFat() + comma);
+        pw.print("" + fm.getCarb() + comma);
+        pw.print("" + fm.getProtein());
+        System.out.println("Logging completed");
+        return true;
     }
 }
