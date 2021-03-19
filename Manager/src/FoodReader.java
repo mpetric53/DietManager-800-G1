@@ -26,6 +26,7 @@ public class FoodReader {
      */
     public void readFile() {
         foods.clear();
+        recepies.clear();
         List<List<String>> records = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(this.fileName))) {
             String line;
@@ -36,6 +37,7 @@ public class FoodReader {
                 if(values[0].equals("b")) addFood(values);
                 else addRecepie(values);
             }
+            System.out.println(".csv data refreshed");
         } catch (IOException e) {
             System.out.println("There was a problem reading foods.csv, please check if it is in the root directory.");
             e.printStackTrace();
@@ -51,12 +53,12 @@ public class FoodReader {
             newFood.setFat(Float.parseFloat(values[3]));
             newFood.setCarb(Float.parseFloat(values[4]));
             newFood.setProtein(Float.parseFloat(values[5]));
+            this.foods.add(newFood);
+            System.out.println(newFood.toString());
         }
         catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("FoodReader -> addFood() recieved incomplete food, ignoring row...");
         }
-        this.foods.add(newFood);
-        System.out.println(newFood.toString());
     }
 
     /*
