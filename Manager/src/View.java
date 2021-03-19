@@ -97,14 +97,23 @@ class View {
         infoPanel.add(jlProtein);
         infoPanel.add(tfProtein);
 
-
-
-//        JTextArea ta = new JTextArea();
         JComboBox jcb = new JComboBox(foodArr);
 
 
+        JPanel weightPanel = new JPanel(); // the panel is not visible in output
+        JLabel labelWeight = new JLabel("Current weight");
+        JTextField weightf = new JTextField(5);
 
+        JLabel weightChangejl = new JLabel("Your weight changed");
+        JTextField weightChangejtf = new JTextField(5);
+        weightChangejtf.setEditable(false);
+        JButton jbWeight = new JButton("Set");
 
+        weightPanel.add(labelWeight);
+        weightPanel.add(weightf);
+        weightPanel.add(jbWeight);
+        weightPanel.add(weightChangejl);
+        weightPanel.add(weightChangejtf);
 
         GridLayout grid = new GridLayout(8, 1, 50, 50);
         frame.setLayout(grid);
@@ -113,6 +122,7 @@ class View {
         frame.add(calPanel);
         frame.add(panel);
         frame.add(infoPanel);
+        frame.add(weightPanel);
 
         frame.setVisible(true);
     }
