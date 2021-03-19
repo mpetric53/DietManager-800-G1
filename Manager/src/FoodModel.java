@@ -4,7 +4,6 @@
     Each item that is read from the file will be constructed as
     Food model object.
  */
-
 public class FoodModel {
 
     String name;
@@ -27,6 +26,17 @@ public class FoodModel {
         this.fat = fat;
         this.carb = carb;
         this.protein = protein;
+    }
+
+    @Override
+    public String toString() {
+        return "FoodModel{" +
+                "name='" + name + '\'' +
+                ", calories=" + calories +
+                ", fat=" + fat +
+                ", carb=" + carb +
+                ", protein=" + protein +
+                '}';
     }
 
     public String getName() {
