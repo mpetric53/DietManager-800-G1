@@ -5,6 +5,7 @@ class View {
 
 
     public static void main(String args[]) {
+    //public void createDisplay() {
         String[] foodArr = {"Burger", "Pancakes", "bla bla", "neki food"};
         //Creating the Frame
         JFrame frame = new JFrame("Diet Manager");
@@ -125,5 +126,9 @@ class View {
         frame.add(weightPanel);
 
         frame.setVisible(true);
+    }
+
+    public void addFood() {
+        //add food to the view
     }
 }
