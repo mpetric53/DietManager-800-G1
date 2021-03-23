@@ -16,5 +16,4 @@ public class FoodController {
         //add food to the view
     }
 
-
 }
