@@ -10,7 +10,7 @@ class View {
         //Creating the Frame
         JFrame frame = new JFrame("Diet Manager");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1000, 700);
+        frame.setSize(1200, 700);
 
       //Creating the MenuBar and adding components
 //        JMenuBar mb = new JMenuBar();
@@ -89,6 +89,10 @@ class View {
         JTextField tfProtein = new JTextField(10);
         tfProtein.setEditable(false);
 
+        JLabel jlNeeded = new JLabel("To desired cal intake");
+        JTextField tfNeeded = new JTextField(10);
+        tfNeeded.setEditable(false);
+
         infoPanel.add(jlCal);
         infoPanel.add(tfCal);
         infoPanel.add(jlFat);
@@ -97,6 +101,10 @@ class View {
         infoPanel.add(tfCarb);
         infoPanel.add(jlProtein);
         infoPanel.add(tfProtein);
+        infoPanel.add(jlNeeded);
+        infoPanel.add(tfNeeded);
+
+
 
         JComboBox jcb = new JComboBox(foodArr);
 
